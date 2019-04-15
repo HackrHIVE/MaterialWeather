@@ -41,7 +41,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.Map;
 import java.util.TimeZone;
 
 public class CustomSearch extends AppCompatActivity
@@ -86,6 +88,19 @@ public class CustomSearch extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener( this );
     }
 
+    public boolean checkPrefs(String x){
+        SharedPreferences sharedPreferences = getSharedPreferences("saved_location",MODE_PRIVATE);
+
+        Map<String, ?> allEntries = sharedPreferences.getAll();
+        Log.i("Size",String.valueOf(allEntries.size()));
+        for (Map.Entry<String, ?> entry : allEntries.entrySet()) {
+            if(x.equals(entry.getKey())){
+                return true;
+            }
+        }
+        return false;
+    }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -123,6 +138,14 @@ public class CustomSearch extends AppCompatActivity
                         public void run() {
                             final CurrentDayData dataSmall = new Gson().fromJson(data, CurrentDayData.class);
                             cityName.setText(dataSmall.getName());
+
+                            if(checkPrefs(dataSmall.getName())){
+                                Resources res = CustomSearch.this.getResources();
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                                    saveLocationButton.setForeground(ResourcesCompat.getDrawable(res,R.drawable.ic_baseline_save,null));
+                                }
+                            }
+
                             city_NameSTR = dataSmall.getName();
                             cityID = dataSmall.getId();
                             dateTime.setText(convertEPOCH(dataSmall.getDt()));
@@ -146,6 +169,8 @@ public class CustomSearch extends AppCompatActivity
 
                             minTemp.setText(String.format("%.2f",minTemp_)+ celcius);
                             maxTemp.setText(String.format("%.2f",maxTemp_)+ celcius);
+
+
 
                             animationView.setVisibility(View.INVISIBLE);
                             linearLayout.setVisibility(View.VISIBLE);
