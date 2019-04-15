@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pureWhite"
+    tools:context=".ActFromID">
+
+    <ProgressBar
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:id="@+id/reloadProgressID"
+        android:layout_height="10dp"
+        android:visibility="visible"
+        app:layout_constraintTop_toTopOf="parent"
+        android:indeterminate="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="vertical"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="7"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/cityNameID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:fontFamily="@font/avenir_medium"
+                android:gravity="center_vertical"
+                android:text="City"
+                android:textAlignment="center"
+                android:textColor="@color/BlueForText"
+                android:textSize="46sp" />
+
+            <TextView
+                android:id="@+id/temperatureID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cityName"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="2"
+                android:fontFamily="@font/avenir_heavy"
+                android:gravity="center_vertical"
+                android:text="Temp"
+                android:textAlignment="center"
+                android:textColor="@color/BlueForText"
+                android:textSize="70sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="21dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/highlight3" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/weatherForecastID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_heavy"
+                android:text="Forecast"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/BlueForText"
+                android:textSize="30sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/containerLowTempID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/minTempID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/avenir_light"
+                        android:text="24"
+                        android:textAlignment="center"
+                        android:textColor="@color/BlueForText"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/avenir_light"
+                        android:text="Low"
+                        android:textAlignment="center"
+                        android:textColor="@color/BlueForText"
+                        android:textSize="50sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/highlightVerticalID"
+                    android:layout_width="21dp"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/containerLowTemp"
+                    android:background="@drawable/highlight_1" />
+
+                <LinearLayout
+                    android:id="@+id/containerHighTempID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@id/highlightVertical"
+                    android:layout_weight="3"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/maxTempID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/avenir_light"
+                        android:text="32"
+                        android:textAlignment="center"
+                        android:textColor="@color/BlueForText"
+                        android:textSize="50sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/avenir_light"
+                        android:text="High"
+                        android:textAlignment="center"
+                        android:textColor="@color/BlueForText"
+                        android:textSize="50sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date - Time"
+                android:textSize="32sp"
+                android:textColor="@color/BlueForText"
+                android:id="@+id/dateTimeID"
+                android:fontFamily="@font/avenir_light"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingAnimID"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_rawRes="@raw/splashscreen" />
+
+
+    <ImageView
+        android:id="@+id/triggerForDrawerID"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible"
+        android:background="@drawable/ic_icons_menu_1"
+        android:onClick="openDrawerID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/saveCityID"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="16dp"
+        android:onClick="SaveKroGuysID"
+        android:visibility="invisible"
+        android:background="@drawable/ripple_login"
+        android:foreground="@drawable/ic_outline_save"
+        app:layout_constraintBottom_toBottomOf="@+id/triggerForDrawerID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/triggerForDrawerID" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

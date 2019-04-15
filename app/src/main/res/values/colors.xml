@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#4e91ff</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="pureWhite">#ffffff</color>
+    <color name="BlueForText">#3d5d7c</color>
+    <color name="BlueForText1">#152230</color>
+    <color name="BlueForTextDark">#3A5E83</color>
+    <color name="Grey">#232323</color>
+    <color name="BlackMaterial">#424242</color>
+    <color name="splashBack">#4e91ff</color>
+    <color name="splashText">#0064cb</color>
+    <color name="splashTextLight">#8ac1ff</color>
+    <color name="splashTextDark">#003f8b</color>
+    <color name="tmdb_light_darkish">#0c7847</color>
+    <color name="tmdb_light">#03d476</color>
+</resources>

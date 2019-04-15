@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/reload_data"
+            android:icon="@drawable/reload_icon"
+            android:title="Reload Data" />
+        <item
+            android:id="@+id/location_current"
+            android:icon="@drawable/location_icon1"
+            android:title="Current Location" />
+        <item
+            android:id="@+id/forecast_sixteen"
+            android:icon="@drawable/ic_rain"
+            android:title="10 Day Forecast" />
+        <item
+            android:id="@+id/search_city"
+            android:title="Search City"
+            android:icon="@drawable/ic_search"/>
+        <item
+            android:id="@+id/savedPlaces"
+            android:title="Saved Cities"
+            android:icon="@drawable/ic_outline_save"/>
+    </group>
+
+</menu>

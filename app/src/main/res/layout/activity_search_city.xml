@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/BlueForText1"
+    tools:context=".SearchCity">
+
+    <EditText
+        android:id="@+id/cityNameCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/test_back"
+        android:hint="Enter City name"
+        android:inputType="text"
+        android:padding="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:fontFamily="@font/raleway_light"
+        android:textAlignment="center"
+        android:textColor="@color/splashBack"
+        android:textColorHint="@color/splashText"
+        android:textCursorDrawable="@color/pureWhite"
+        android:textSize="28sp"
+        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/searchCityBTN"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ripple_login"
+        android:foreground="@drawable/test_back"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:padding="16dp"
+
+        android:fontFamily="@font/space_mono_bold"
+
+        android:text="Search"
+        android:textAllCaps="true"
+        android:textColor="@color/splashBack"
+        android:onClick="goToCustomSearch"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cityNameCustom"  />
+
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/loadingCustom"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/searchCityBTN"
+        app:layout_constraintStart_toStartOf="@+id/searchCityBTN"
+        app:layout_constraintTop_toBottomOf="@+id/searchCityBTN" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
