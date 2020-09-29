@@ -3,5 +3,5 @@ This application was my Certification project for Android Application Developmen
 and Semester project for my college.
 
 ---
-## Screenshots
+## Screenshot
 <img src="./weather.png" height="500em" />
