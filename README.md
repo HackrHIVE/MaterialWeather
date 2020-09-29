@@ -4,4 +4,4 @@ and Semester project for my college.
 
 ---
 ## Screenshots
-<img src="./Screenshots/weather.png" height="500em" />
+<img src="./weather.png" height="500em" />
